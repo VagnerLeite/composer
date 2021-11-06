@@ -31,6 +31,16 @@
     },
     "scripts": {
         "test": "phpunit tests\\TestBuscadorDeCursos.php",
-        "cs": "phpcs --standard=PSR12 src/"
+        "cs": "phpcs --standard=PSR12 src/",
+        "check": [
+            "@cs",
+            "@test"
+        ],
+        "post-update-cmd": [
+            "@test"
+        ]
+    },
+    "scripts-descriptions": {
+        "check": "Roda as verificações do código. PHPCS e PHP Unit"
     }
 }
