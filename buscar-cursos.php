@@ -12,5 +12,5 @@ $buscador = new Buscador($client, $crawler);
 $cursos = $buscador->buscar('/cursos-online-programacao/php');
 
 foreach ($cursos as $curso) {
-    echo exibeMensagem($curso);
+    exibeMensagem($curso);
 }
